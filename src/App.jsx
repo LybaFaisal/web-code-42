@@ -1,10 +1,10 @@
 import Lybafunc from './component'
 
 function App() {
- 
+  let std_data = 'I am student data';
   return (
     <div className="App">
-      <Lybafunc/>
+      <Lybafunc info = {std_data}/>
     </div>
   );
 }
