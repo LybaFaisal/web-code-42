@@ -1,28 +1,70 @@
 /* Creating and Nesting Components */
-
+import React, { useState } from 'react';
 import './comp.css'
 
 // How to display data in React:
 
-function Lybafunc(props) {
-    // let std_data = 123456;
-    // How to display data from a different component=>
+function LoginSignupForm(){
+    const [isLogin, setIsLogin] = useState(true);
 
+  const toggleForm = () => {
+    setIsLogin(!isLogin);
+};
 
-        //Through Objects
-
-        let user = {
-            name : 'Lyba',
-            degree : 'ComputerSciences',
-            regno : 184
-        }
+if(isLogin){
     return(
-        <>
-        <h1>Hey, I am Lyba</h1>
-        <h3>This is my first React App Component</h3>
+        <div>
+            <h1>Login Form</h1>
+            <form action="">
+                <div>
+                    <label htmlFor="">Email:</label>
+                    <input type="email" placeholder='Enter your email' required />
+                </div>
 
-        <p>Here is the Users Info : {user.degree}</p>
-        </>
-    )
+                <div>
+                    <label htmlFor="">Password:</label>
+                    <input type="password" placeholder='Enter your password' required />
+                </div>
+
+                <button type='submit'>Login</button>
+                
+            </form>
+
+            <p>Don't have an account? <button onClick={toggleForm}>SignUp</button></p>
+            {/* Outside the form */}
+        </div>
+    );
+    }
+
+    else{
+        return(
+            <div>
+                <h1>SignUp Form</h1>
+            <form action="">
+                <div>
+                    <label htmlFor="">Email:</label>
+                    <input type="email" placeholder='Enter your email' required />
+                </div>
+
+                <div>
+                    <label htmlFor="">Password:</label>
+                    <input type="password" placeholder='Enter your password' required />
+                </div>
+
+                <div>
+                    <label htmlFor="">Confirm Password:</label>
+                    <input type="password" placeholder='Confirm your password' required />
+                </div>
+
+                <button type='submit'>SignUp</button>
+                
+            </form>
+
+            <p>Already have an account? <button onClick={toggleForm}>Login</button></p>
+            {/* Outside the form */}
+            </div>
+        );
+    }
 }
-export default Lybafunc;
+
+export default LoginSignupForm;

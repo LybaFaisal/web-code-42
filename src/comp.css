@@ -1,6 +1,44 @@
-h1{
-  color: cadetblue;
+.App {
+  text-align: center;
+  padding: 20px;
 }
-h3{
-  background-color: bisque;
+
+form {
+  margin: 20px auto;
+  padding: 40px;
+  width: 500px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+}
+
+input {
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px;
+  border-radius: 5px;
+  background-color:purple;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #6bb76f;
+}
+h1{
+  color:mediumvioletred;
+}
+label{
+  color:purple;
+}
+p{
+  color:rgb(91, 58, 91);
 }
